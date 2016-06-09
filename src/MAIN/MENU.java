@@ -1,24 +1,23 @@
-
 package MAIN;
 
 public class MENU extends javax.swing.JFrame {
 
-    AUPlayer auPlayer  = new AUPlayer("flute.au");
-    
+    AUPlayer auPlayer = new AUPlayer("flute.au");
+
     public MENU() {
         initComponents();
         this.setLocationRelativeTo(null);
         auPlayer.playSound();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
         start = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        aboutBtn = new javax.swing.JLabel();
         btn4 = new javax.swing.JLabel();
         btn3 = new javax.swing.JLabel();
         btn2 = new javax.swing.JLabel();
@@ -57,12 +56,17 @@ public class MENU extends javax.swing.JFrame {
         });
         getContentPane().add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 240, 60));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ABOUT");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 340, 170, 30));
+        aboutBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        aboutBtn.setForeground(new java.awt.Color(255, 255, 255));
+        aboutBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        aboutBtn.setText("ABOUT");
+        aboutBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aboutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aboutBtnMouseClicked(evt);
+            }
+        });
+        getContentPane().add(aboutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 340, 170, 30));
 
         btn4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn4.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,7 +173,7 @@ public class MENU extends javax.swing.JFrame {
     }//GEN-LAST:event_btn4MouseClicked
 
     private void btn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseClicked
-        
+
     }//GEN-LAST:event_btn1MouseClicked
 
     private void startMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startMouseClicked
@@ -185,6 +189,12 @@ public class MENU extends javax.swing.JFrame {
         auPlayer.stopSound();
         this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void aboutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutBtnMouseClicked
+        // TODO add your handling code here:
+        new ABOUT().setVisible(true);
+        auPlayer.stopSound();
+    }//GEN-LAST:event_aboutBtnMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -220,6 +230,7 @@ public class MENU extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
+    private javax.swing.JLabel aboutBtn;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel btn1;
     private javax.swing.JLabel btn2;
@@ -227,7 +238,6 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JLabel btn4;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel help;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel options;
     private javax.swing.JLabel scores;

@@ -14,11 +14,12 @@ public class OPTIONS extends javax.swing.JFrame {
     private void initComponents() {
 
         playerNameField = new javax.swing.JTextField();
-        levels = new javax.swing.JComboBox();
-        volumeSlider = new javax.swing.JSlider();
-        save = new javax.swing.JComboBox();
-        ringsAndSpears = new javax.swing.JComboBox();
         exit = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        saveName = new javax.swing.JButton();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -31,17 +32,12 @@ public class OPTIONS extends javax.swing.JFrame {
         playerNameField.setForeground(new java.awt.Color(255, 255, 255));
         playerNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         playerNameField.setBorder(null);
+        playerNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerNameFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(playerNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 230, 30));
-
-        levels.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Level 1", "Level 2", "Level 3", "Level 4", "Level 5" }));
-        getContentPane().add(levels, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 250, 40));
-        getContentPane().add(volumeSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 146, 250, 40));
-
-        save.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Save", "Don't Sava" }));
-        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 250, 40));
-
-        ringsAndSpears.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Spear and Ring 1", "Spear and Ring 2", "Spear and Ring 3", "Spear and Ring 4", "Spear and Ring 5" }));
-        getContentPane().add(ringsAndSpears, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 200, 40));
 
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -50,6 +46,27 @@ public class OPTIONS extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 100, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MAIN/patch.PNG"))); // NOI18N
+        jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 260, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MAIN/patch.PNG"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, 60));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MAIN/patch.PNG"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 260, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MAIN/patch.PNG"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 260, 60));
+
+        saveName.setText("Save Name");
+        saveName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveNameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(saveName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MAIN/options.png"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
@@ -60,6 +77,15 @@ public class OPTIONS extends javax.swing.JFrame {
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
         this.dispose();
     }//GEN-LAST:event_exitMouseClicked
+
+    private void playerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameFieldActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_playerNameFieldActionPerformed
+
+    private void saveNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveNameActionPerformed
+        System.out.println("Player Name: "+ playerNameField.getText());
+    }//GEN-LAST:event_saveNameActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -94,10 +120,11 @@ public class OPTIONS extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
     private javax.swing.JLabel exit;
-    private javax.swing.JComboBox levels;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField playerNameField;
-    private javax.swing.JComboBox ringsAndSpears;
-    private javax.swing.JComboBox save;
-    private javax.swing.JSlider volumeSlider;
+    private javax.swing.JButton saveName;
     // End of variables declaration//GEN-END:variables
 }

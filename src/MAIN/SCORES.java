@@ -28,12 +28,8 @@ public class SCORES extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        name1 = new javax.swing.JLabel();
-        name2 = new javax.swing.JLabel();
-        name3 = new javax.swing.JLabel();
-        score1 = new javax.swing.JLabel();
-        score2 = new javax.swing.JLabel();
-        score3 = new javax.swing.JLabel();
+        playerName = new javax.swing.JLabel();
+        playerScore = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
@@ -42,35 +38,15 @@ public class SCORES extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        name1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        name1.setForeground(new java.awt.Color(255, 255, 255));
-        name1.setText("GEOFFREY");
-        getContentPane().add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 200, 30));
+        playerName.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        playerName.setForeground(new java.awt.Color(255, 255, 255));
+        playerName.setText("GEOFFREY");
+        getContentPane().add(playerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 200, 30));
 
-        name2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        name2.setForeground(new java.awt.Color(255, 255, 255));
-        name2.setText("BOSCO");
-        getContentPane().add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 210, 30));
-
-        name3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        name3.setForeground(new java.awt.Color(255, 255, 255));
-        name3.setText("BENJAMIN");
-        getContentPane().add(name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 210, 30));
-
-        score1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        score1.setForeground(new java.awt.Color(204, 0, 0));
-        score1.setText("1010");
-        getContentPane().add(score1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 80, 30));
-
-        score2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        score2.setForeground(new java.awt.Color(204, 0, 0));
-        score2.setText("900");
-        getContentPane().add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 70, 30));
-
-        score3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        score3.setForeground(new java.awt.Color(204, 0, 0));
-        score3.setText("700");
-        getContentPane().add(score3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 70, 30));
+        playerScore.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        playerScore.setForeground(new java.awt.Color(204, 0, 0));
+        playerScore.setText("1010");
+        getContentPane().add(playerScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 80, 30));
 
         close.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         close.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -128,11 +104,7 @@ public class SCORES extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
     private javax.swing.JLabel close;
-    private javax.swing.JLabel name1;
-    private javax.swing.JLabel name2;
-    private javax.swing.JLabel name3;
-    private javax.swing.JLabel score1;
-    private javax.swing.JLabel score2;
-    private javax.swing.JLabel score3;
+    public javax.swing.JLabel playerName;
+    public javax.swing.JLabel playerScore;
     // End of variables declaration//GEN-END:variables
 }

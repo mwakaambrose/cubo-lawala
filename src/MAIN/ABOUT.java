@@ -3,13 +3,13 @@ package MAIN;
 
 public class ABOUT extends javax.swing.JFrame {
 
-    AUPlayer auPlayer  = new AUPlayer("cat.au");
+    //AUPlayer auPlayer  = new AUPlayer("cat.au");
     
     public ABOUT() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        auPlayer.playSound();
+        //auPlayer.playSound();
     }
     
     @SuppressWarnings("unchecked")
@@ -51,7 +51,7 @@ public class ABOUT extends javax.swing.JFrame {
 
     private void okMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okMouseClicked
         this.dispose();
-        auPlayer.stopSound();
+        //auPlayer.stopSound();
     }//GEN-LAST:event_okMouseClicked
 
     public static void main(String args[]) {
