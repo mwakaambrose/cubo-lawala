@@ -1,12 +1,16 @@
 
 package MAIN;
 
+import javax.swing.JOptionPane;
+
 public class OPTIONS extends javax.swing.JFrame {
 
+    PlayerPrefferences configs;
     public OPTIONS() {
         initComponents();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
+        configs = new PlayerPrefferences();
     }
 
     @SuppressWarnings("unchecked")
@@ -84,7 +88,8 @@ public class OPTIONS extends javax.swing.JFrame {
     }//GEN-LAST:event_playerNameFieldActionPerformed
 
     private void saveNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveNameActionPerformed
-        System.out.println("Player Name: "+ playerNameField.getText());
+        configs.setPlayerName(playerNameField.getText());
+        JOptionPane.showMessageDialog(rootPane, playerNameField.getText()+" Added succesfully..");
     }//GEN-LAST:event_saveNameActionPerformed
 
     public static void main(String args[]) {

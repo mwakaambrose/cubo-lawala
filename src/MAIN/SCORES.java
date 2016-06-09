@@ -11,12 +11,17 @@ package MAIN;
  */
 public class SCORES extends javax.swing.JFrame {
 
+    PlayerPrefferences configs;
+    
     /**
      * Creates new form SCORES
      */
     public SCORES() {
         initComponents();
         this.setLocationRelativeTo(null);
+        configs = new PlayerPrefferences();
+        playerName.setText(configs.getPlayerName());
+        playerScore.setText(configs.getPlayerScore());
     }
 
     /**
