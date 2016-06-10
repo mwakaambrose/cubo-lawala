@@ -1,5 +1,7 @@
 package MAIN;
 
+import circlespear.CircleSpear;
+
 public class MENU extends javax.swing.JFrame {
 
     AUPlayer auPlayer = new AUPlayer("flute.au");
@@ -178,14 +180,14 @@ public class MENU extends javax.swing.JFrame {
 
     private void startMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startMouseClicked
         //new RUN().setVisible(true);
-        new CircleSpear();
+        new CircleSpear().setVisible(true);
         auPlayer.stopSound();
         this.dispose();
     }//GEN-LAST:event_startMouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         //new RUN().setVisible(true);
-        new CircleSpear();
+        new CircleSpear().setVisible(true);
         auPlayer.stopSound();
         this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
