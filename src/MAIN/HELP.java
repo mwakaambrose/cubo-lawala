@@ -44,6 +44,7 @@ public class HELP extends javax.swing.JFrame {
 
         jScrollPane1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
@@ -60,7 +61,7 @@ public class HELP extends javax.swing.JFrame {
 
     private void abtBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abtBtnMouseClicked
         JOptionPane.showMessageDialog(null, "This Game was developed by \n"
-                + "-GEOFFREY\n-BOSCO\n-BENJAMIN", "ABOUT US", WIDTH);
+                + "-GEOFFREY\n-BOSCO\n-BENJAMIN \n-OCAN", "ABOUT US", WIDTH);
     }//GEN-LAST:event_abtBtnMouseClicked
 
     private void okMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okMouseClicked

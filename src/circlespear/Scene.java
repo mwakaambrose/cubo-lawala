@@ -38,6 +38,7 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
     public String min, sec;
     Rectangle spearBound, ringBound;
     private int ringWidth, ringHeight;
+    private int currentScore;
     private boolean isCollided = false;
     Timer time = new Timer(3, this);
 
@@ -53,8 +54,9 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         min = "0";
         sec = "00";
         time.start();
+        currentScore = 0;
         playerPrefferences = new PlayerPrefferences();
-        score = playerPrefferences.getPlayerScore();
+        scores = Integer.parseInt(playerPrefferences.getPlayerScore());
         playername = playerPrefferences.getPlayerName();
         //timer = new java.util.Timer();
         //timer.schedule(new TimerClass(), 1000);
@@ -82,9 +84,9 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         //g2d.drawImage(timeboard, 0, 10, null);
         g2d.drawImage(timeboard, (d.width / 2) - 500, 0, null);
         g2d.setColor(Color.white);
-        g2d.drawString("SCORES", 200, 30);
+        g2d.drawString("TOTAL SCORES", 200, 30);
         g2d.drawString("TIME", 300, 30);
-        g2d.drawString("SPEARS REMAINING", 500, 30);
+        g2d.drawString("CURRENT SCORES", 500, 30);
         g2d.drawString("PLAYER NAME", 700, 30);
         Font small = new Font("Helvetica", Font.BOLD, 30);
         FontMetrics metr = getFontMetrics(small);
@@ -92,7 +94,7 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         g.setFont(small);
         g2d.drawString(scores + "", 200, 70);
         g2d.drawString(min + ":" + sec, 300, 70);
-        g2d.drawString(trials + "", 500, 70);
+        g2d.drawString(currentScore + "", 500, 70);
         g2d.drawString(playername, 700, 70);
         g2d.drawImage(ring, ringTAnim, this);
         g2d.drawImage(spear, spearTAnim, this);
@@ -109,6 +111,7 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         } else if (isCollided == true) {
             drawWin(g, "Press Escape to play Again..");
             scores = scores + 1;
+            currentScore = currentScore + 1;
         }
     }
 
@@ -136,7 +139,7 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
             angularVel = 5;
             System.out.println("SPACE");
         } else if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            playerPrefferences.setPlayerScore(scores+"");
+            playerPrefferences.setPlayerScore(Integer.parseInt(playerPrefferences.getPlayerScore())+scores+"");
             resetGame();
             System.out.println("ESCAPE");
         }
