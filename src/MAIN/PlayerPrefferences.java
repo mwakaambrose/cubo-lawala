@@ -13,7 +13,7 @@ public class PlayerPrefferences {
     }
 
     public String getPlayerName() {
-        return configs.get("name", "0");
+        return configs.get("name", "No Name set");
     }
 
     public void setPlayerName(String playerName) {

@@ -35,13 +35,13 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
     private int trials = 3;
     public int scores = 0;
     public String score, playername;
-    public String min, sec;
+    public int min, sec;
     Rectangle spearBound, ringBound;
     private int ringWidth, ringHeight;
     private int currentScore;
     private boolean isCollided = false;
     Timer time = new Timer(3, this);
-
+    int delay = 1000;
     Dimension d = new Dimension();
     PlayerPrefferences playerPrefferences;
 
@@ -51,15 +51,25 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
         loadImage();
-        min = "0";
-        sec = "00";
+        min = 0;
+        sec = 00;
         time.start();
         currentScore = 0;
         playerPrefferences = new PlayerPrefferences();
         scores = Integer.parseInt(playerPrefferences.getPlayerScore());
         playername = playerPrefferences.getPlayerName();
-        //timer = new java.util.Timer();
-        //timer.schedule(new TimerClass(), 1000);
+        ActionListener timerTask = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sec++;
+                if (sec == 60) {
+                    min++;
+                }
+            }
+        };
+        
+        new Timer(delay, timerTask).start();
     }
 
     private void setSurfaceSize() {
@@ -223,6 +233,8 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
         angularVel = 0;
         spearAngle = 0;
         spearAngleVel = 0;
+        sec = 0;
+        min = 0;
     }
 
     private void drawWin(Graphics g, String msg) {
