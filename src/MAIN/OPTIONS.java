@@ -89,6 +89,7 @@ public class OPTIONS extends javax.swing.JFrame {
 
     private void saveNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveNameActionPerformed
         configs.setPlayerName(playerNameField.getText());
+        configs.setPlayerScore("0");
         JOptionPane.showMessageDialog(rootPane, playerNameField.getText()+" Added succesfully..");
     }//GEN-LAST:event_saveNameActionPerformed
 
