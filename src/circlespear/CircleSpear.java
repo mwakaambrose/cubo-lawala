@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class CircleSpear extends JFrame {
     
@@ -21,12 +22,6 @@ public class CircleSpear extends JFrame {
             @Override
             public void windowClosed(WindowEvent e) {
                 System.out.println("Closed");
-                new MENU().setVisible(true);
-            }
-
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.out.println("Closing");
                 new MENU().setVisible(true);
             }
             
