@@ -159,6 +159,7 @@ public class MENU extends javax.swing.JFrame {
 
     private void optionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_optionsMouseClicked
         new OPTIONS().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_optionsMouseClicked
 
     private void scoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scoresMouseClicked

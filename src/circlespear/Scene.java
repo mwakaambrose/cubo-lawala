@@ -1,5 +1,6 @@
 package circlespear;
 
+import MAIN.MENU;
 import MAIN.PlayerPrefferences;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -44,7 +45,7 @@ public class Scene extends JPanel implements ActionListener, KeyListener {
     int delay = 1000;
     Dimension d = new Dimension();
     PlayerPrefferences playerPrefferences;
-
+    
     public Scene() {
         setSurfaceSize();
         addKeyListener(this);

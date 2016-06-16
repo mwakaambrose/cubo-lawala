@@ -1,4 +1,3 @@
-
 package MAIN;
 
 import javax.swing.JOptionPane;
@@ -6,6 +5,7 @@ import javax.swing.JOptionPane;
 public class OPTIONS extends javax.swing.JFrame {
 
     PlayerPrefferences configs;
+
     public OPTIONS() {
         initComponents();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -80,17 +80,22 @@ public class OPTIONS extends javax.swing.JFrame {
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
         this.dispose();
+        new MENU().setVisible(true);
     }//GEN-LAST:event_exitMouseClicked
 
     private void playerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameFieldActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_playerNameFieldActionPerformed
 
     private void saveNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveNameActionPerformed
-        configs.setPlayerName(playerNameField.getText());
-        configs.setPlayerScore("0");
-        JOptionPane.showMessageDialog(rootPane, playerNameField.getText()+" Added succesfully..");
+        if (!playerNameField.getText().isEmpty()) {
+            configs.setPlayerName(playerNameField.getText());
+            configs.setPlayerScore("0");
+            JOptionPane.showMessageDialog(rootPane, playerNameField.getText() + " Added succesfully..");
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Please Enter a name before you save.");
+        }
     }//GEN-LAST:event_saveNameActionPerformed
 
     public static void main(String args[]) {
